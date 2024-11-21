@@ -4,12 +4,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-height: 150vh;
+  max-height: 220vh;
   width: 100%;
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
+  background-image: url(./assets/foto_alcaldia.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
+
 
 .header {
   display: flex;
@@ -21,10 +26,15 @@ body {
   height: 10%;
 }
 
+.header p {
+  margin-right: 1%;
+  width: 90%;
+}
+
 .form-container {
   margin: 2% auto;
   max-width: 800px;
-  background-color:rgb(90, 193, 221);
+  background-color:rgba(90, 193, 221, 0.671);
   padding: 15px;
   border-radius: 10px;
   font-family: Arial, sans-serif;
@@ -40,6 +50,11 @@ body {
   background-color: rgb(0, 71, 130);
   color: #fff;
   height: 9%;
+}
+
+.footer p {
+  margin-right: 2%;
+  width: 100%;
 }
 
 .logo {
@@ -83,11 +98,12 @@ h1 {
 label {
   display: block;
   margin-bottom: 5px;
-  color: #1f2224;
+  color: rgb(0, 144, 76);
   font-weight: bold;
 }
 
 .row {
+  position: relative; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,7 +119,7 @@ label {
 }
 
 .Row {
-  width: 46%;
+  width: 45%;
   padding: 10px;
   border: 1px solid #006994;
   border-radius: 5px;
@@ -119,6 +135,11 @@ select {
   font-weight: bold;
   background-color: white;
   font-family: 'Montserrat', sans-serif;
+}
+
+.select-dropdown {
+  max-height: 200px;  
+  overflow-y: auto;   
 }
 
 .dropdown {
@@ -158,17 +179,18 @@ input::placeholder {
   background-color: white;
 }
 
-.submit{
+.submit {
   display: flex;
-  width: 6.2%;
   justify-content: center;
-  justify-self: flex-end;
+  align-items: center; 
   background-color: rgb(0, 144, 76);
   color: white;
   border-radius: 25px;
-  margin-left: 70%;
-  font-size: 12px;
-  margin-bottom: 6.5%;
+  width: auto; 
+  padding: 10px 20px; 
+  margin: 10px auto; 
+  margin-left: 67%;
+  margin-bottom: 2%;
 }
 
 .GovText {
@@ -241,6 +263,103 @@ input[type="time"]:focus:before,
 input[type="time"]:valid:before {
   content: "";
 }
+
+.add-date-button {
+  background-color: rgb(0, 144, 76);
+  margin-bottom: 3%;
+  margin-left: 1%;
+}
+
+.remove-date-button {
+  background-color: rgb(221, 58, 47);
+  margin-bottom: 3%;
+  margin-left: 1%;
+}
+
+
+.customDatesContainer {
+  background-color: rgb(255, 255, 255);
+  border: solid 0.2px #006994;
+  border-radius: 5px;
+  margin-bottom: 2%;
+  color: rgb(0, 144, 76);
+}
+
+.customDatesContainer li {
+  list-style: none;
+}
+
+@media (max-width: 1680px) {
+
+  .submit {
+    margin-left: 56%;
+    width: 20%;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  .submit {
+    margin-left: 56%;
+    width: 24%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header, .footer {
+    flex-direction: row; 
+    height: auto; 
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .Row {
+    width: 50%; 
+  }
+
+  .iRow {
+    width: 98%; 
+  }
+
+  .submit {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto; 
+  }
+
+  h1 {
+    font-size: 20px; 
+  }
+
+  .modalh1 {
+    font-size: 1.8rem; 
+  }
+
+  .Modal {
+    padding: 30px; 
+  }
+
+  button {
+    font-size: 1.1rem; 
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+or */
+input.error, select.error {
+  border: 1px solid red;
+}
+
+
+
 @media (max-width: 768px) {
   .header, .footer {
     flex-direction: column;
@@ -252,8 +371,9 @@ input[type="time"]:valid:before {
   }
 
   .submit {
-    width: 90%;
-    margin-left: 5%; 
+    width: 90%; 
+    margin-left: auto; 
+    margin-right: auto; 
   }
 }
 
