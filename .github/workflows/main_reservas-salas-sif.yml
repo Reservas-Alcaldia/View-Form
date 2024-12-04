@@ -55,4 +55,4 @@ jobs:
           app-name: 'reservas-salas-sif'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_06799054446F401AAC8564F34AF0625A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E234EC3AE06C4FC1B53857147F996B93 }}
